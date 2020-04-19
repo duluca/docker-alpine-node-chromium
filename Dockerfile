@@ -1,4 +1,5 @@
-FROM node:lts-alpine
+# FROM node:lts-alpine
+FROM mhart/alpine-node:slim-12
 
 ADD xvfb-chromium /usr/bin/xvfb-chromium
 
@@ -14,3 +15,5 @@ RUN set -e \
   \
   && echo " ------ CLEANING UP ------" \
   && rm -rf /var/cache/apk/*
+
+ENV CHROMIUM_BIN=/usr/bin/chromium-browser
