@@ -1,5 +1,5 @@
 # FROM node:lts-alpine
-FROM mhart/alpine-node:slim-12
+FROM mhart/alpine-node:12
 
 ADD xvfb-chromium /usr/bin/xvfb-chromium
 
